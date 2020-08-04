@@ -1,3 +1,4 @@
+mkdir bin
 gcc src/core_dump.c -o bin/core_dump
 gcc src/cpu_load.c -o bin/cpu_load
 gcc src/docker_max.c -o bin/docker_max
