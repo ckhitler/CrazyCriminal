@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <errno.h>
 #include <pthread.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 #define MAX_PROC 9999
 

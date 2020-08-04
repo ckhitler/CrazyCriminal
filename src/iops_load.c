@@ -6,6 +6,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <string.h>
+#include <sys/wait.h>
 
 
 #define MAX_FILESIZE 10000
