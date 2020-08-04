@@ -1,17 +1,16 @@
-gcc core_dump.c -o core_dump
-gcc cpu_load.c -o cpu_load
-gcc docker_max.c -o docker_max
-gcc file_max.c -o file_max
-gcc fork_crazy.c -o fork_crazy
-gcc iops_load.c -o iops_load
-gcc iptables_drop.c -o iptables_drop
-gcc memory_crazy.c -o memory_crazy
-gcc net_delay.c -o net_delay
-gcc net_down.c -o net_down
-gcc net_loss.c -o net_loss
-gcc procress_crazy.c -o procress_crazy
-gcc sched_fifo.c -o sched_fifo -pthread
-gcc signal_pending.c -o signal_pending
-gcc socket_connect.c -o socket_connect -pthread
-gcc thread_crazy.c -o thread_crazy -pthread
-gcc write_log.c -o write_log
+gcc src/core_dump.c -o bin/core_dump
+gcc src/cpu_load.c -o bin/cpu_load
+gcc src/docker_max.c -o bin/docker_max
+gcc src/file_max.c -o bin/file_max
+gcc src/fork_crazy.c -o bin/fork_crazy
+gcc src/iops_load.c -o bin/iops_load
+gcc src/iptables_drop.c -o bin/iptables_drop
+gcc src/memory_crazy.c -o bin/memory_crazy
+gcc src/net_delay.c -o bin/net_delay
+gcc src/net_down.c -o bin/net_down
+gcc src/net_loss.c -o bin/net_loss
+gcc src/sched_fifo.c -o bin/sched_fifo -pthread
+gcc src/signal_pending.c -o bin/signal_pending
+gcc src/socket_connect.c -o bin/socket_connect -pthread
+gcc src/thread_crazy.c -o bin/thread_crazy -pthread
+gcc src/write_log.c -o bin/write_log
