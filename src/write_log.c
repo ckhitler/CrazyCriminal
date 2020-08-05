@@ -36,7 +36,7 @@ int do_writefile()
     }
 
     //closing the file
-    int close(int fd);
+    close(fd);
 
     //delete the file
     remove(namebuf);

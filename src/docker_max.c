@@ -8,7 +8,7 @@
 #include <string.h>
 
 
-#define MAX_CONTAINERS 1000
+#define MAX_CONTAINERS 800
 
 
 int main(int argc, char ** argv)

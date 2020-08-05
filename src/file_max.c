@@ -8,7 +8,7 @@
 #include <string.h>
 
 
-#define MAX_FILESIZE 1000000
+#define MAX_FILE_COUNT 1000000
 
 
 int main(int argc, char ** argv)
@@ -21,12 +21,12 @@ int main(int argc, char ** argv)
     length = strlen(namebuf);
 
     /* start of test */
-    for (i = 0; i < MAX_FILESIZE; ++i) {
+    for (i = 0; i < MAX_FILE_COUNT; ++i) {
         sprintf(namebuf+length, "%d", i);
         fd = open(namebuf ,O_CREAT | O_RDWR, 0777);
     }
     sleep(300);
-    for (i = 0; i < MAX_FILESIZE; ++i) {
+    for (i = 0; i < MAX_FILE_COUNT; ++i) {
         sprintf(namebuf+length, "%d", i);
         remove(namebuf);
     }
