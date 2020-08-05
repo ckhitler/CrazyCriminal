@@ -11,7 +11,7 @@ volatile int done = 0;
 
 void handler (int sig)
 {
-    ;
+    done = 1;
 }
 
 void child(void)
