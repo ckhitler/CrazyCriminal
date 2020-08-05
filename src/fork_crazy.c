@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#define MAX_PROC 9999
+#define MAX_PROC 99999
 
 
 int main(void)

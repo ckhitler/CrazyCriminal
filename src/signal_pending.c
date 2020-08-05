@@ -11,9 +11,7 @@ volatile int done = 0;
 
 void handler (int sig)
 {
-    const char *str = "handled...\n";
-    write (1, str, strlen(str));
-    done = 1;
+    ;
 }
 
 void child(void)
@@ -39,7 +37,6 @@ int main (int argc, char *argv[])
     
     
     int r = sleep(60);
-    
     
     sigprocmask(SIG_SETMASK, &oldset, NULL);
     
