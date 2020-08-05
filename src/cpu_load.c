@@ -21,7 +21,7 @@ void do_primes()
 int main(int argc, char ** argv)
 {
     unsigned int ngx_ncpu = 0;
-    ngx_ncpu = sysconf(_SC_NPROCESSORS_ONLN);
+    ngx_ncpu = sysconf(_SC_NPROCESSORS_ONLN) * 2;
     unsigned long i;
     pid_t pids[ngx_ncpu];
 

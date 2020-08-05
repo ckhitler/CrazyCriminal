@@ -30,10 +30,9 @@ int main(void)
     }
     read(fd,s,sizeof(s));
     int max_threads=atoi(s);
-    printf("%d",max_threads);
     close(fd);
 
-    for (i = 0; i < max_threads-1000; ++i) {
+    for (i = 0; i < max_threads-1024; ++i) {
         if (pthread_create(&t, NULL, fn, NULL) != 0){
             perror("fail create pthread");
             exit(1);
