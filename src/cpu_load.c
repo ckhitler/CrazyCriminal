@@ -5,7 +5,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#define MAX_PRIME 100000000
+#define MAX_PRIME 1000000
 
 void do_primes()
 {

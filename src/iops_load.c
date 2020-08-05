@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include <string.h>
 #include <sys/wait.h>
+#include <unistd.h>
 
 
 #define MAX_FILESIZE 10000
@@ -14,7 +15,7 @@
 
 int do_writefile()
 {
-    int i,num = 0;
+    int i,ret,num = 0;
     char namebuf[100];
     char prefix[] = "/tmp/p";
     int length, pid, fd;
@@ -31,13 +32,14 @@ int do_writefile()
 
     for (i=0;i<=MAX_FILESIZE;i++){
       write(fd, buff, n);
-      syncfs(fd);
+      ret = syncfs(fd);
+      if (ret == -1){
+        printf("errno:%d, err:%s\n", errno, strerror(errno));
+      }
     }
 
-    int close(int fd);
-
+    close(fd);
     remove(namebuf);
-
     return 0;
 }
 

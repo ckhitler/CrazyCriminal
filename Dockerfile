@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y gcc
 RUN cd /root/ && bash build.sh
 
 
-CMD ["/bin/bash", "/root/run.sh"]
+CMD ["/bin/bash", "-c", "cd /root && ./run.sh"]

@@ -10,6 +10,5 @@ int main(int argc, char *argv[]){
         if (ptr == NULL)
             break;
         memset(ptr, 1, 0x100000);
-        printf("malloced %d MB\n", ++n);
     }
 }
