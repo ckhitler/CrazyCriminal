@@ -10,6 +10,7 @@ gcc src/fork_crazy.c -o bin/fork_crazy
 gcc src/iops_load.c -o bin/iops_load
 gcc src/iptables_drop.c -o bin/iptables_drop
 gcc src/memory_crazy.c -o bin/memory_crazy
+gcc src/memory_leak.c -o bin/memory_leak
 gcc src/net_delay.c -o bin/net_delay
 gcc src/net_down.c -o bin/net_down
 gcc src/net_loss.c -o bin/net_loss

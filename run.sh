@@ -2,7 +2,7 @@
 
 while true
 do
-  case "$[ 1 + $[ RANDOM % 16 ]]" in
+  case "$[ 1 + $[ RANDOM % 17 ]]" in
     1) echo "core_dump" && bin/core_dump
        ;;
     2) echo 'cpu_load' && bin/cpu_load
@@ -34,6 +34,8 @@ do
     15) echo 'thread_crazy' && bin/thread_crazy
        ;;
     16) echo 'write_log' && bin/write_log
+       ;;
+    17) echo 'memory_leak' && bin/memory_leak
        ;;
   esac
 done
