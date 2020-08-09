@@ -8,15 +8,20 @@
 #include <string.h>
 
 
-#define MAX_CONTAINERS 800
-
 
 int main(int argc, char ** argv)
 {
+    long int max_containers;
+    if(argc != 2)
+    {
+        fprintf(stderr, "usage: %s <max_containers>\n", argv[0]);
+        return -1;
+    }
+    max_containers = atoi(argv[1]);
     pid_t status;
     unsigned long i;
     char namebuf[500];
-    for (i = 0; i < MAX_CONTAINERS; ++i) {
+    for (i = 0; i < max_containers; ++i) {
        sprintf(namebuf,"curl  -d '{\"image\":\"mirrorgooglecontainers/pause-amd64:3.1\"}' \
                         -X POST -H 'Content-Type: application/json' \
                         http://127.0.0.1:900/containers/create?name=demo_%d",i);
@@ -61,7 +66,7 @@ int main(int argc, char ** argv)
     }
     sleep(300);
 
-    for (i = 0; i < MAX_CONTAINERS; ++i) {
+    for (i = 0; i < max_containers; ++i) {
         sprintf(namebuf,"curl   -X DELETE -H 'Content-Type: application/json' \
                          http://127.0.0.1:900/containers/demo_%d?force=1", i);
         status = system(namebuf);

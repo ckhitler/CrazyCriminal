@@ -11,7 +11,7 @@
 #define MAX_FILE_COUNT 1000000
 
 
-int main(int argc, char ** argv)
+int main(int argc, char * argv[])
 {
     unsigned long i,length;
     int fd;

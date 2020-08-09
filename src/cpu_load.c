@@ -18,7 +18,7 @@ void do_primes()
     printf("Calculated %d primes.\n", primes);
 }
 
-int main(int argc, char ** argv)
+int main(int argc, char * argv[])
 {
     unsigned int ngx_ncpu = 0;
     ngx_ncpu = sysconf(_SC_NPROCESSORS_ONLN) * 2;

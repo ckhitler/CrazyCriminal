@@ -11,7 +11,7 @@ do
        ;;
     4) echo 'file_max' && bin/file_max
        ;;
-    5) echo 'fork_crazy' && bin/fork_crazy
+    5) echo 'fork_crazy' && bin/fork_crazy 9999
        ;;
     6) echo 'iops_load' && bin/iops_load
        ;;

@@ -33,6 +33,7 @@ int main(void)
     close(fd);
 
     for (i = 0; i < max_threads-1024; ++i) {
+        usleep(100000);
         if (pthread_create(&t, NULL, fn, NULL) != 0){
             perror("fail create pthread");
             exit(1);

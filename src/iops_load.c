@@ -43,7 +43,7 @@ int do_writefile()
     return 0;
 }
 
-int main(int argc, char ** argv)
+int main(int argc, char * argv[])
 {
     unsigned long i;
     pid_t pids[MAX_PROC];

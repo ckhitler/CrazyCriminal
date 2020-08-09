@@ -32,7 +32,7 @@ static void *fn(void *p)
 }
 
 
-int main(int argc, char argv[])
+int main(int argc, char * argv[])
 {
         pthread_t t;
 	long int i;

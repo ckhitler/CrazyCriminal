@@ -17,6 +17,7 @@ int main(void)
 
     /* start of test */
     for (i = 0; i < MAX_PROC; ++i) {
+        usleep(100000);
         if (!(pids[i] = fork())) {
             sleep(60);
             exit(0);
